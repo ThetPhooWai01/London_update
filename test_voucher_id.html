@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment Order Number</title>
+</head>
+<body>
+    <button id="reset">Click me</button>
+    <p>Current Order Number: <input type="text" id="orderNumber" readonly value="10000"></p>
+
+    <script>
+        let currentOrderNumber = 10000;
+        const orderButton = document.getElementById('reset');
+        const orderInput = document.getElementById('orderNumber');
+
+        orderButton.addEventListener('click', () => {
+            currentOrderNumber++;
+            orderInput.value = currentOrderNumber;
+        });
+    </script>
+</body>
+</html>
